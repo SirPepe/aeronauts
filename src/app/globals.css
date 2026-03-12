@@ -4,18 +4,12 @@
   box-sizing: border-box;
 }
 
-@view-transition {
-  navigation: auto;
-}
-
 :root {
   color-scheme: light dark;
   --light: oklch(96% 0.02 67);
   --dark: oklch(20% 0.01 285);
-  --background: light-dark(var(--light), var(--dark));
-  --foreground: light-dark(var(--dark), var(--light));
-  color: var(--foreground);
-  background: var(--background);
+  color: light-dark(var(--dark), var(--light));
+  background: light-dark(var(--light), var(--dark));
   text-wrap: pretty;
   text-rendering: optimizeLegibility;
   font-family: Arial, Helvetica, sans-serif;
