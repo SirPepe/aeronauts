@@ -14,6 +14,7 @@ export default async function Home() {
 export async function fetchData() {
   const storyblokApi = getStoryblokApi();
   return await storyblokApi.get(`cdn/stories/aeronauts`, {
-    version: process.env.NODE_ENV === "production" ? "published" : "draft",
+    version:
+      process.env.CONTENT_VERSION === "published" ? "published" : "draft",
   });
 }
